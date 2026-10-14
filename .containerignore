@@ -1,0 +1,4 @@
+*
+!Containerfile
+!container-init.sh
+!generate-config.py

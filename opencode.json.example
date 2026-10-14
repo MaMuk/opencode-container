@@ -1,0 +1,49 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "model": "featherless/your-organization/your-model",
+  "update": "disable",
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "allow"
+    }
+  ],
+  "experimental": {
+    "policies": [
+      {
+        "action": "provider.use",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "provider.use",
+        "resource": "featherless",
+        "effect": "allow"
+      }
+    ]
+  },
+  "providers": {
+    "featherless": {
+      "name": "Featherless AI",
+      "models": {
+        "your-organization/your-model": {
+          "name": "Your selected model"
+        }
+      },
+      "package": "@opencode/ai/providers/openai-compatible",
+      "env": [
+        "LLM_API_KEY"
+      ],
+      "settings": {
+        "baseURL": "https://api.featherless.ai/v1"
+      }
+    }
+  },
+  "agents": {
+    "title": {
+      "model": "featherless/your-organization/your-model"
+    }
+  }
+}

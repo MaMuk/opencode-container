@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+/opencode.json
+/opencode.jsonc
+/cli.json
+__pycache__/
+*.pyc
+test-results.log
+
+# Local task notes and execution-environment metadata.
+/HOST_COMMANDS.sh
+/.agents/
+/.codex/
+/.aws/
